@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firebase Auth · Code With Muaaz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section class="card" id="loginCard">
+    <h2>Welcome back</h2>
+    <div class="field"><input id="loginEmail" class="input" type="email" placeholder="Email"></div>
+    <div class="field"><input id="loginPassword" class="input" type="password" placeholder="Password"></div>
+    <button id="loginBtn" class="btn btn-primary">Log in</button>
+
+    <div class="divider"><span></span><p>or</p><span></span></div>
+
+    <button id="googleLoginBtn" class="btn btn-google">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt=""> Continue with Google
+    </button>
+
+    <p class="muted">No account? <a href="#" id="toRegister">Create one</a></p>
+    <div id="loginMsg" class="msg"></div>
+  </section>
+
+  <!-- REGISTER -->
+  <section class="card hidden" id="registerCard">
+    <h2>Create your account</h2>
+
+    <div class="uploader">
+      <img id="regPreview" class="avatar" src="https://via.placeholder.com/96" alt="Preview">
+      <div class="uploader-col">
+        <input id="regPhoto" type="file" accept="image/*" class="hidden">
+        <button id="pickPhotoBtn" class="btn btn-outline">Choose profile photo</button>
+        <p class="hint">Square photo recommended • JPG/PNG</p>
+      </div>
+    </div>
+
+    <div class="field"><input id="regName" class="input" type="text" placeholder="Full name"></div>
+    <div class="field"><input id="regEmail" class="input" type="email" placeholder="Email"></div>
+    <div class="field"><input id="regPassword" class="input" type="password" placeholder="Password"></div>
+    <button id="registerBtn" class="btn btn-primary">Create account</button>
+
+    <div class="divider"><span></span><p>or</p><span></span></div>
+
+    <button id="googleSignupBtn" class="btn btn-google">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt=""> Continue with Google
+    </button>
+
+    <p class="muted">Already have an account? <a href="#" id="toLogin">Log in</a></p>
+    <div id="regMsg" class="msg"></div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="card hidden" id="profileCard">
+    <div class="profile">
+      <img id="pfAvatar" class="avatar" src="" alt="Profile">
+      <h3 id="pfName" class="title"></h3>
+      <p id="pfEmail" class="sub"></p>
+      <button id="logoutBtn" class="btn btn-primary" style="margin-top:14px">Log out</button>
+      <div id="profMsg" class="msg ok"></div>
+    </div>
+  </section>
+
+  <!-- Firebase + App -->
+  <script type="module" src="script.js">
+   
+  </script>
+</body>
+</html>

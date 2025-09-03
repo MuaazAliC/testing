@@ -1,0 +1,225 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, #9fd7ff33, transparent),
+    radial-gradient(1000px 500px at 90% 80%, #00f2fe22, transparent),
+    linear-gradient(135deg, #0e1630, #0b1220);
+  color: #0f172a;
+}
+
+/* Card */
+.card {
+  width: min(420px, 92vw);
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  animation: fadeIn .25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h2 {
+  color: #0f172a;
+  font-size: 22px;
+  margin-bottom: 14px;
+  letter-spacing: .2px;
+}
+
+/* Form fields */
+.field {
+  margin: 10px 0 2px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  background: #fafafa;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+}
+
+.input:focus {
+  border-color: #60a5fa;
+  background: #fff;
+  box-shadow: 0 0 0 4px #60a5fa22;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .03s ease, background .2s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1e4fd4;
+}
+
+.btn-google {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.btn-google:hover {
+  background: #f7f7f7;
+}
+
+.btn-google img {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px dashed #cbd5e1;
+  color: #334155;
+}
+
+.btn-outline:hover {
+  background: #f8fafc;
+  border-style: solid;
+}
+
+/* Muted text and links */
+.muted {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.muted a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.muted a:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.divider span {
+  height: 1px;
+  background: #e5e7eb;
+  flex: 1;
+}
+
+.divider p {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}
+
+/* Photo uploader */
+.uploader {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 6px 0 8px;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 3px solid #dbeafe;
+  background: #f1f5f9;
+  object-fit: cover;
+  flex: 0 0 84px;
+}
+
+.uploader-col {
+  flex: 1;
+}
+
+.hint {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* Profile view */
+.profile {
+  text-align: center;
+}
+
+.profile .avatar {
+  width: 96px;
+  height: 96px;
+  margin: 8px auto 10px;
+  border-color: #bfdbfe;
+}
+
+.title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sub {
+  color: #475569;
+  font-size: 14px;
+}
+
+/* Error / info messages */
+.msg {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.ok {
+  color: #15803d;
+}
